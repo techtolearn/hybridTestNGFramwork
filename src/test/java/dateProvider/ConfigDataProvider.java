@@ -9,8 +9,8 @@ public class ConfigDataProvider {
 	Properties  pro;
 	
 	public ConfigDataProvider(){
-		File src = new File("./Configuration/config.properties");
-		
+		File src = new File("C:/BBD_FrameWork/com.HybridTestNGFrameWork/Configuration/config.properties");
+
 		try {
 			FileInputStream fist = new FileInputStream(src);
 			pro =  new Properties();
@@ -30,6 +30,10 @@ public class ConfigDataProvider {
 	public String getIEPath(){
 		String ie = pro.getProperty("IEPath");
 		return ie;
+	}
+	public String getFirefoxPath(){
+		String fire = pro.getProperty("FirefoxPath");
+		return fire;
 	}
 	public String getApplicationUrl(){
 		String url = pro.getProperty("url");
